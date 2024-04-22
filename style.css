@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root{
+    --box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.outer-wrap{
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    padding: 2rem;
+}
+.inner-wrap {
+    max-width: 72rem;
+    margin: auto;
+}
+.heading {
+    margin: 2rem auto;
+}
+.heading .title {
+    font-size: 2rem;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+}
+.heading .sub-title {
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 300;
+    text-align: center;
+}
+
+.category{
+    margin: 0.6rem 0rem 3rem 0rem;
+    display: flex;
+    justify-content: center;
+     flex-wrap: wrap;
+}
+.category span{
+    padding: 0.6rem;
+    border-radius: 0.19rem;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    margin: 0.3rem;
+}
+.category span:hover{
+    background-color: lightgrey;
+}
+.category span.active{
+    background-color: blue !important;
+    color: white;
+}
+
+.card {
+    background-color: white;
+     padding: 0.6rem;
+     border-radius: 0.3rem;
+     box-shadow: var(--box-shadow);
+     margin: 1.3rem auto;
+     display: flex;
+}
+.card .image{
+    margin: auto;
+}
+.card .image img{
+    max-width: 18rem;
+    border: 0.06rem solid white;
+    border-radius: 0.3rem;
+}
+
+.card .information{
+    flex-grow: 1;
+    padding: 0.6rem;
+    margin-left: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.9rem;
+}
+.card .title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: black;
+}
+.card .description{
+    color: gray;
+    margin: 0.3rem 0rem;
+}
+.card .time{
+    color: gray;
+}
+
+.card .other{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.card .source{
+    background-color: blue;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+}
+.card .url {
+    background-color: green;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border: 0rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+@media (max-width:800px){
+    .card{
+        flex-wrap: wrap;
+    }
+    .card .information{
+        margin-left: 0rem;
+    }
+}
+@media (max-width:320px){
+    .card .image img{
+        width: 13rem;
+    }
+}
